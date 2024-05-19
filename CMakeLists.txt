@@ -8,11 +8,11 @@ if (POLICY CMP0141)
   cmake_policy(SET CMP0141 NEW)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
-
-project ("HashMiss")
+SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/PROFILE")
+project ("CacheMiss")
 
 # Добавьте источник в исполняемый файл этого проекта.
-add_executable (HashMiss "HashMiss.cpp" )
+add_executable (HashMiss "CacheMiss.cpp" )
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET HashMiss PROPERTY CXX_STANDARD 20)

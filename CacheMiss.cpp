@@ -50,6 +50,7 @@ int main()
 	std::cout << "Hit  time summation: " << timeHit  << std::endl;
 	//Miss time summation : 861337100ns		   
 	//Hit  time summation : 243014400ns        |Arround 3.5 times faster|
-	//For matrix: 10000 X 10000 
+	//For matrix: 10000 X 10000
+	system("pause");
 	return 0;
 }
